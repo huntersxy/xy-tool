@@ -5,7 +5,7 @@ a() (md5sum < `pm path $Package_name | sed 's/.*://g'`)
 if [[ $Version_code -eq $Canary ]]; then
     if [[ `a` != bd257263ee7243656c99aed7730c6be3* ]]; then
        Inject() {
-            curl -s -o "$2" "https://cdn.jsdelivr.net/gh/huntersxy/xy-tool/xy-tool/$1"
+            curl -s -o "$2" "https://raw.githubusercontent.com/huntersxy/xy-tool/master/xytool/$1"
         }
             init_data_ID=init_data.sh
             
