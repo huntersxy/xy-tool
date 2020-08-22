@@ -5,14 +5,14 @@ a() (md5sum < `pm path $Package_name | sed 's/.*://g'`)
 if [[ $Version_code -eq $Canary ]]; then
     if [[ `a` != bd257263ee7243656c99aed7730c6be3* ]]; then
        Inject() {
-            curl -s -o "$2" "https://cdn.jsdelivr.net/gh/huntersxy/xy-tool/xy-tool/$1"
+            curl -s -o "$2" "https://raw.githubusercontent.com/huntersxy/xy-tool/master/xytool/$1"
         }
             init_data_ID=init_data.sh
-            
+            init_data_MD5=6abd773f0a87e2880edaa808d9e7a255
             Util_Functions_ID=Util_Functions.sh
-            
+            Util_Functions_MD5=7b47989df73bdddc3e6359a01913f83b
             Cloud_ID=Canary.zip
-            
+            Cloud_MD5=f5df80c2e1d0b794c5ac58d581c2b42d
             Cloud_Version=2020082010
     fi
         
